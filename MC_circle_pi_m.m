@@ -10,7 +10,7 @@ clf
 rng(0,"twister")    % choose rng method
 n = 100000;           % # points
 a = -1;             % lower limit
-b = 1;              % upper limit
+b = 8;              % upper limit
 r = (b - a)/2;      % radius
 cx = (a+b)/2;       % center
 cy = cx;
@@ -28,10 +28,10 @@ end
 % Estimate pi
 in_circle = sum(points(:,3));
 pi_est = 4*(in_circle/n);
-fprintf("Number of points in circle: %0d of %0d", in_circle, n)
-fprintf("Square area: %0.3f", (2*r)^2)
-fprintf("pi estimate: %0.6f", pi_est)
-fprintf("Estimated circle area: %0.3f", pi_est*(r^2))
+fprintf("Number of points in circle: %0d of %0d\n", in_circle, n)
+fprintf("Square area: %0.3f\n", (2*r)^2)
+fprintf("pi estimate: %0.6f\n", pi_est)
+fprintf("Estimated circle area: %0.3f\n", pi_est*(r^2))
 
 % Different groups for coloring purposed
 x = points(:,1);
